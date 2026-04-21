@@ -25,3 +25,15 @@ navLinks.forEach((link) => {
         target.scrollIntoView({ behavior: "smooth" });
     });
 });
+
+const projects = document.querySelectorAll(".project");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+});
+
+projects.forEach((project) => observer.observe(project));
