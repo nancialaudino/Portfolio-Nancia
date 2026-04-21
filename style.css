@@ -33,3 +33,109 @@ h3 {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #222;
+    font-weight: 500;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 4rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#hero {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+#hero a {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+#hero a:hover {
+    background-color: #1d4ed8;
+    text-decoration: none;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+#skills li {
+    background-color: #f1f5f9;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.project {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+.project p {
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.project a {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#contact ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+#contact li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: #888;
+}
