@@ -146,18 +146,11 @@ section {
     border: 1px solid var(--light-green);
     border-radius: 6px;
     background-color: #fff;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .project:hover {
     box-shadow: 0 4px 12px rgba(52, 62, 61, 0.1);
-}
-
-.project.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .project p {
@@ -184,9 +177,51 @@ footer {
     text-align: center;
     padding: 2rem;
     font-size: 0.85rem;
-    color: var(--green);
     background-color: var(--dark);
     color: var(--bg);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.tags span {
+    background-color: var(--bg);
+    border: 1px solid var(--light-green);
+    color: var(--green);
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.experience {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--light-green);
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.experience-date {
+    font-size: 0.85rem;
+    color: var(--green);
+}
+
+.experience-company {
+    font-size: 0.9rem;
+    color: var(--green);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
 }
 
 @media (max-width: 600px) {
