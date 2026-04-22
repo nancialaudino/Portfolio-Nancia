@@ -86,17 +86,17 @@ main {
 }
 
 section {
-    padding: 5rem 0;
+    padding: clamp(3rem, 6vw, 5rem) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #hero {
     text-align: center;
-    padding: 6rem 0;
+    padding: clamp(4rem, 8vw, 6rem) 0;
 }
 
 #hero h1 {
-    font-size: 3.2rem;
+    font-size: clamp(2rem, 5vw, 3.2rem);
     margin-bottom: 0.6rem;
     background: linear-gradient(135deg, #fff 0%, #7c6af7 100%);
     -webkit-background-clip: text;
@@ -105,21 +105,23 @@ section {
 }
 
 #hero .subtitle {
-    font-size: 1.3rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.3rem);
     color: var(--accent);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     font-weight: 500;
     letter-spacing: 0.05rem;
 }
 
 #hero .description {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
-    max-width: 500px;
-    margin: 0 auto 2rem auto;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 #hero a {
+    display: inline-block;
     background-color: var(--accent);
     color: #fff;
     padding: 0.7rem 1.6rem;
@@ -148,17 +150,24 @@ section {
     font-size: 0.9rem;
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
 .project {
-    margin-bottom: 1.5rem;
     padding: 1.5rem;
     border: 1px solid var(--border);
     border-radius: 6px;
     background-color: var(--bg-card);
-    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project:hover {
-    box-shadow: 0 4px 20px rgba(124, 106, 247, 0.15);
+    box-shadow: 0 6px 24px rgba(124, 106, 247, 0.2);
+    border-color: var(--accent);
 }
 
 .project p {
@@ -194,6 +203,7 @@ section {
     border: 1px solid var(--border);
     border-radius: 6px;
     background-color: var(--bg-card);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .experience-header {
@@ -238,16 +248,45 @@ footer {
     border-top: 1px solid var(--border);
 }
 
-@media (max-width: 600px) {
-    #hero h1 {
-        font-size: 2rem;
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
     }
 
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+}
+
+@media (max-width: 480px) {
     main {
         padding: 0 1rem;
+    }
+
+    .project {
+        padding: 1rem;
+    }
+
+    .experience {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1rem;
     }
 }
