@@ -21,6 +21,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     color: var(--text);
     background-color: var(--bg);
+    background-image: radial-gradient(ellipse at top, #1a1527 0%, #0f1117 60%);
     line-height: 1.6;
 }
 
@@ -86,7 +87,7 @@ main {
 
 section {
     padding: 5rem 0;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 #hero {
@@ -95,16 +96,20 @@ section {
 }
 
 #hero h1 {
-    font-size: 2.6rem;
-    margin-bottom: 0.4rem;
-    color: var(--text);
+    font-size: 3.2rem;
+    margin-bottom: 0.6rem;
+    background: linear-gradient(135deg, #fff 0%, #7c6af7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 #hero .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--accent);
     margin-bottom: 0.8rem;
     font-weight: 500;
+    letter-spacing: 0.05rem;
 }
 
 #hero .description {
@@ -235,7 +240,7 @@ footer {
 
 @media (max-width: 600px) {
     #hero h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     nav ul {
